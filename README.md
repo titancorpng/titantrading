@@ -1,1 +1,1 @@
-# titantradingacademy
+# titantrading
