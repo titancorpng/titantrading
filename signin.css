@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and main container styling */
+body {
+    background-image: url('images/signinbg.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ensures the background covers the full screen */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Navigation Styling */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Adds spacing between links */
+    z-index: 10;
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #0077ff;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the main section takes full height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Registration Form Container */
+#registration {
+    padding: 3rem;
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+    margin-top: 13rem; /* Adds space at the top */
+}
+
+/* Form Styling */
+#registration form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+#registration form label {
+    color: white;
+    text-align: left;
+    font-size: 0.9rem; /* Smaller label size */
+    margin-bottom: 0.4rem;
+}
+
+/* Input Field Styling */
+#registration form input {
+    margin-bottom: 0.8rem;
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    font-size: 0.85rem; /* Smaller input text size */
+}
+
+/* Button Styling */
+#registration form button {
+    background-color: #0077ff;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem; /* Smaller button text */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registration form button:hover {
+    background-color: #005bb5;
+}
+
+/* Account Link Styling */
+.new-account-link {
+    margin-top: 1rem;
+    color: white;
+    font-size: 0.8rem; /* Smaller link text */
+}
+
+.new-account-link a {
+    text-decoration: none;
+    color: #0077ff;
+    font-weight: bold;
+}
+
+.new-account-link a:hover {
+    color: #f5f5f5;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    #registration {
+        width: 60%; /* Slightly bigger width for tablets */
+        margin-top: 8rem; /* Adjust margin for tablets */
+    }
+
+    nav {
+        flex-direction: column; /* Stack items vertically on tablets */
+        align-items: flex-start; /* Align links to the left */
+        gap: 1rem; /* Add space between links */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    #registration {
+        width: 90%; /* Full width for mobile */
+        padding: 2rem; /* Less padding for mobile screens */
+        margin-top: 4rem; /* Adjust top margin for mobile */
+    }
+
+    nav {
+        padding: 0.8rem;
+        flex-direction: column; /* Stack items vertically on mobile */
+        gap: 0.5rem; /* Adjust space between nav items */
+    }
+
+    nav a {
+        margin-bottom: 0.5rem; /* Adds space between nav items */
+    }
+}

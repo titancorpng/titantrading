@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: 'ariel', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f4f4f4; /* Slightly lighter background */
+}
+
+/* Header */
+.header {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(180deg, #000, #333);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo-section {
+    flex: 1;
+}
+.logo {
+    width: 200px;
+    height: auto;
+    margin-top: 0.75rem;
+    border-radius: 8px;
+}
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.nav ul li a:hover {
+    color: #ccc;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Privacy Policy Section */
+.privacy-policy {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-top: 4px solid #000; /* Stylish top border */
+}
+
+.privacy-policy h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Individual Boxed Paragraphs */
+.privacy-policy p, .privacy-policy ul {
+    background-color: #f9f9f9; /* Light background for paragraphs */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Heading for Subsections */
+.privacy-policy h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Styled Lists */
+.privacy-policy ul {
+    padding-left: 20px;
+    font-size: 1.1rem;
+    list-style-type: disc;
+}
+.privacy-policy ul li {
+    margin-bottom: 12px;
+}
+
+/* Links inside the privacy policy */
+.privacy-policy a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.privacy-policy a:hover {
+    text-decoration: underline;
+    color: #004b99;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}

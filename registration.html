@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="registration.css">
+    <style>
+        /* Styling for the navigation bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0077ff;
+        }
+
+        main {
+            margin-top: 4rem; /* Prevent form overlap with the header */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Links -->
+    <nav>
+        <a href="../index.html" class="hover:text-blue-400">Back to Home</a> <!-- Link to Home -->
+        <a href="../signin/signin.html" class="hover:text-blue-400">Sign In</a> <!-- Link to Sign In -->
+    </nav>
+
+    <!-- Form Section -->
+    <main>
+        <section id="REGISTRATION" class="flex">
+            <form id="registration-form" action="submit_form.php" method="POST" class="registration-form">
+                <h2 class="text-xl font-bold mb-4 text-white text-center">Registration Form</h2>
+
+                <!-- First Name -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required class="form-input">
+
+                <!-- Last Name -->
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required class="form-input">
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="form-input">
+
+                <!-- Phone -->
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required class="form-input">
+
+                <!-- Gender -->
+                <label for="gender">Gender:</label>
+                <div class="flex justify-between w-full">
+                    <label><input type="radio" id="male" name="gender" value="male" required /> Male</label>
+                    <label><input type="radio" id="female" name="gender" value="female" required /> Female</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="form-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

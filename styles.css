@@ -1,0 +1,360 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --silver: #c0c0c0;
+    --gradient: linear-gradient(135deg, var(--black), var(--silver), var(--white));
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--white);
+    background-color: var(--black);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth header background transition */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 1.5rem;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s; /* Adds transition for hover effects */
+}
+
+.nav ul li a:hover {
+    color: var(--silver);
+    border-bottom: 2px solid var(--silver); /* Adds underline on hover */
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('images/homepage.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-position 0.5s ease; /* Smooth transition for parallax effect */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: -1.5rem;
+    right: -10rem;
+    background-color: rgba(0, 0, 0, 0); /* Slight overlay for better text contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    animation: slide-up 1s ease-out;
+}
+
+.hero h2 {
+    font-size: 2rem; /* Increased font size for emphasis */
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.hero p {
+    font-size: 1rem; /* Increased font size for emphasis */
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--silver);
+    color: var(--black);
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--white);
+}
+
+/* Animation for Hero Section */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* iPhone Video Section */
+.iphone-video-container {
+    position: relative;
+    width: 300px; /* Adjust width for the iPhone frame */
+    height: 600px; /* Adjust height for the iPhone frame */
+    margin: 2rem auto; /* Center the iPhone frame */
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    overflow: hidden; /* Ensure video stays within the frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* iPhone Frame */
+.iphone-frame {
+    position: absolute;
+    top: var(--frame-top, 0.5rem); /* Adjustable top position */
+    left: var(--frame-left, -4rem); /* Adjustable left position */
+    right: var(--frame-right, 4rem); /* Adjustable left position */
+    width: var(--frame-width, 140%); /* Adjustable width */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 500px; /* Set a maximum width */
+    z-index: 2;
+    pointer-events: none; /* Makes sure the frame doesn't block the video */
+}
+
+/* iPhone Video */
+.iphone-video {
+    position: absolute;
+    top: var(--video-top, 9%); /* Adjustable top position for video */
+    left: var(--video-left, 8%); /* Adjustable left position for video */
+    width: var(--video-width, 80%); /* Adjustable width for video */
+    height: var(--video-height, 81%); /* Adjustable height for video */
+    border-radius: 15px; /* Smooth edges for the video */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    object-fit: cover; /* Ensures video scales properly */
+}
+
+/* Services Section */
+.services {
+    background-color: var(--black);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-align: center; /* Centered header */
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center; /* Align cards in the center */
+    flex-wrap: nowrap; /* Prevent wrapping to a new row */
+    gap: 1rem; /* Adjust gap between cards */
+    padding: 0 1rem; /* Reduce padding for a better fit */
+    overflow-x: auto; /* Enable horizontal scrolling for overflow */
+    scrollbar-width: thin; /* For modern browsers, make scrollbar smaller */
+}
+
+.card {
+    background: var(--gradient);
+    padding: 1rem;
+    margin: 0.5rem 1rem; /* Adjust vertical spacing */
+    border-radius: 8px;
+    color: var(--white);
+    flex: 0 0 300px; /* Fixed width for each card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .service-cards {
+        gap: 0.5rem; /* Reduce gap on smaller screens */
+    }
+
+    .card {
+        flex: 0 0 250px; /* Adjust card width for smaller screens */
+    }
+}
+
+/* About Us Section */
+.about-us {
+    background-color: var(--black);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--silver);
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: var(--silver);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: var(--black);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--silver);
+    text-align: center;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-us label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--silver);
+}
+
+.contact-us input, .contact-us textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--silver);
+    border-radius: 5px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.contact-us button {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--silver);
+    color: var(--black);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+    background-color: var(--white);
+}
+
+/* Social Media Links Styling */
+.social-links {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-links h3 {
+    color: var(--silver);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    background: var(--gradient);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+.footer {
+    background: var(--gradient);
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-cards, .tool-cards {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center;
+    }
+
+    .card {
+        width: 80%; /* Make cards take up 80% of the width on mobile */
+    }
+
+    .hero h2 {
+        font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    .cta-button {
+        padding: 0.5rem 1.5rem; /* Increased padding for better clickability */
+    }
+}
