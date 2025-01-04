@@ -69,33 +69,17 @@ body {
     background-image: url('https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/homepage.png');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* Consider changing to 'fixed' if parallax is desired */
+    background-attachment: scroll;
     color: var(--white);
     text-align: center;
-    padding: 4rem 1rem; /* Add horizontal padding for smaller screens */
+    padding: 4rem 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: background-position 0.5s ease;
+    transition: background-position 0.5s ease; /* Smooth transition for parallax effect */
 }
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero {
-        background-size: contain; /* Ensures the entire image fits */
-        padding: 3rem 1rem; /* Reduce padding for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        background-size: contain;
-        min-height: auto; /* Allow section height to adapt to content */
-    }
-}
-
 
 .hero-content {
     max-width: 600px;
