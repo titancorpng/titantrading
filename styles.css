@@ -1,3 +1,24 @@
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
 :root {
     --black: #000000;
     --white: #ffffff;
@@ -138,15 +159,13 @@ body {
 /* iPhone Video Section */
 .iphone-video-container {
     position: relative;
-    width: 90%; /* Adjust width to be responsive */
-    max-width: 300px; /* Set a maximum width */
-    height: auto; /* Allow height to scale with content */
-    aspect-ratio: 2 / 4; /* Maintain the aspect ratio */
-    margin: 2rem auto; /* Center the container */
-    background: rgba(0, 0, 0, 0); /* Transparent background */
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
-    overflow: hidden; /* Keep content inside the container */
+    width: 300px; /* Adjust width for the iPhone frame */
+    height: 600px; /* Adjust height for the iPhone frame */
+    margin: 2rem auto; /* Center the iPhone frame */
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    overflow: hidden; /* Ensure video stays within the frame */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,46 +174,27 @@ body {
 /* iPhone Frame */
 .iphone-frame {
     position: absolute;
-    top: 5%; /* Adjust frame position */
-    left: 0;
-    right: 0;
-    width: 100%; /* Responsive frame width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 300px; /* Set a maximum width */
+    top: var(--frame-top, 0.5rem); /* Adjustable top position */
+    left: var(--frame-left, -4rem); /* Adjustable left position */
+    right: var(--frame-right, 4rem); /* Adjustable left position */
+    width: var(--frame-width, 140%); /* Adjustable width */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 500px; /* Set a maximum width */
     z-index: 2;
-    pointer-events: none; /* Prevent the frame from blocking interactions */
+    pointer-events: none; /* Makes sure the frame doesn't block the video */
 }
 
 /* iPhone Video */
 .iphone-video {
     position: absolute;
-    top: 9%; /* Position video within the frame */
-    left: 8%;
-    width: 80%; /* Adjust video size */
-    height: 81%; /* Maintain height proportional to frame */
+    top: var(--video-top, 9%); /* Adjustable top position for video */
+    left: var(--video-left, 8%); /* Adjustable left position for video */
+    width: var(--video-width, 80%); /* Adjustable width for video */
+    height: var(--video-height, 81%); /* Adjustable height for video */
     border-radius: 15px; /* Smooth edges for the video */
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
-    object-fit: cover; /* Scale video to fit without distortion */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .iphone-video-container {
-        width: 95%; /* Scale container for smaller screens */
-        max-width: 250px; /* Adjust maximum width */
-    }
-
-    .iphone-frame {
-        max-width: 250px; /* Match the frame size to container */
-    }
-
-    .iphone-video {
-        width: 85%; /* Adjust video size */
-        height: 85%; /* Maintain proportional height */
-        top: 7%; /* Center video better on smaller screens */
-        left: 7.5%; /* Adjust left position */
-    }
+    background-color: rgba(0, 0, 0, 0);
+    object-fit: cover; /* Ensures video scales properly */
 }
 
 /* Services Section */
