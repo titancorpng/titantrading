@@ -6,47 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Titan Trading Academy</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <!-- Logo placeholder -->
+            <!-- Logo -->
             <a href="#" class="logo">
-            <img src="https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/titanlogo.png" alt="Titan Trading Academy Logo" class="logo">
-            </a>
+                <img src="https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/titanlogo.png" alt="Titan Trading Academy Logo" class="logo">            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#trading-tools">Trading Tools</a></li> <!-- Trading tools -->
+                    <li><a href="#trading-tools">Trading Tools</a></li>
                     <li><a href="#about-us">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
-                    <li><a href="signin/signin.html">Sign In</a></li> <!-- Sign In added to list -->
-                    <li><a href="registration/registration.html">Register</a></li> <!-- Register added to list -->
+                    <li><a href="http://127.0.0.1:5500/titan_academy/signin/signin.html" class="nav-link">Sign In / Up</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-</body>
-</html>
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h2>Empowering Traders Worldwide</h2>
-        <p>Join us to unlock your trading potential with expert guidance, courses, and market insights.</p>
-        <a href="#services" class="cta-button">Get Started</a>
-    </div>
-
-    <!-- iPhone Video Section -->
-    <div class="iphone-video-container">
-       <img src="https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/iphone.png" alt="iPhone Frame" class="iphone-frame"> <!-- Path to the iPhone frame image -->
-        <video autoplay muted loop class="iphone-video">
-            <source src="https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/titan2024.mp4" type="video/mp4"> <!-- Path to your video -->
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Empowering Traders Worldwide</h2>
+            <p>Join us to unlock your trading potential with expert guidance, courses, and market insights.</p>
+            <a href="#services" class="cta-button">Get Started</a>
+        </div>
+        <!-- iPhone Video Section -->
+        <div class="iphone-video-container">
+            <img src="https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/iphone.png" alt="iPhone Frame" class="iphone-frame"> <!-- Path to the iPhone frame image -->
+            <video autoplay muted loop class="iphone-video">
+                <source src="https://raw.githubusercontent.com/titancorpng/titantrading/refs/heads/main/titan2024.mp4" type="video/mp4"> <!-- Path to your video -->
+                Your browser does not support the video tag.            </video>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -66,7 +71,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Trading Tools Section -->
     <section id="trading-tools" class="services">
         <h2>Our Trading Tools</h2>
@@ -94,34 +99,64 @@
     </section>
 
     <!-- Contact Us Section -->
-<!-- Contact Us Section -->
-<section id="contact" class="contact-us">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need more information, feel free to reach out to us. We are here to help you!</p>
-    <form action="#" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+    <section id="contact" class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to reach out to us. We are here to help you!</p>
+        <form action="#" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" class="cta-button">Send Message</button>
-    </form>
-    <div class="social-links">
-        <h3>Follow Us</h3>
-        <a href="https://www.tiktok.com/@titancorpng?lang=en" target="_blank" class="social-icon">Tiktok</a>
-        <a href="https://x.com/titancorpng" target="_blank" class="social-icon">Twitter</a>
-        <a href="https://www.linkedin.com/in/muhammad-aliyu-24785b237/" target="_blank" class="social-icon">LinkedIn</a>
-        <a href="https://youtube.com/@titancorporation_ng?si=I-eCRbaLyILTySgf" target="_blank" class="social-icon">Youtube</a>
-        <a href="https://t.me/titancorpng" target="_blank" class="social-icon">Telegram</a>
-    </div>
-</section>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+        <div class="social-links">
+            <h3>Follow Us</h3>
+            <a href="https://www.tiktok.com/@titancorpng?lang=en" target="_blank" class="social-icon">Tiktok</a>
+            <a href="https://x.com/titancorpng" target="_blank" class="social-icon">Twitter</a>
+            <a href="https://www.linkedin.com/in/muhammad-aliyu-24785b237/" target="_blank" class="social-icon">LinkedIn</a>
+            <a href="https://youtube.com/@titancorporation_ng?si=I-eCRbaLyILTySgf" target="_blank" class="social-icon">Youtube</a>
+            <a href="https://t.me/titancorpng" target="_blank" class="social-icon">Telegram</a>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Titan Trading Academy. All rights reserved.</p>
     </footer>
+
+    <script>
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav ul');
+
+    hamburger.addEventListener('click', () => {
+        // Toggle 'active' class on both menu and hamburger icon
+        hamburger.classList.toggle('active'); // ✅ Required for bar animation
+        nav.classList.toggle('active');
+    });
+
+    // Optional: Close menu when a nav link is clicked
+    document.querySelectorAll('.nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active'); // ✅ Also remove animation
+        });
+    });
+
+    // Optional: Close menu if user clicks outside nav on mobile
+    window.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active'); // ✅ Also remove animation
+        }
+    });
+});
+    </script>
 </body>
 </html>
