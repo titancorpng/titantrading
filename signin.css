@@ -325,3 +325,66 @@ body {
   pointer-events: auto;
   transition-delay: 2s;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+      width: 95%;
+      height: auto;
+      flex-direction: column;
+      box-shadow: none;
+  }
+
+  .wrapper .form-wrapper,
+  .wrapper .info-wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      transform: none !important;
+      opacity: 1 !important;
+      filter: none !important;
+      pointer-events: auto;
+      text-align: center;
+  }
+
+  .wrapper .form-wrapper.login,
+  .wrapper .form-wrapper.register,
+  .wrapper .info-wrapper.login,
+  .wrapper .info-wrapper.register {
+      padding: 20px;
+  }
+
+  .wrapper .bg1,
+  .wrapper .bg2 {
+      display: none; /* Hide the skewed backgrounds */
+  }
+
+  .input-box {
+      margin: 15px 0;
+  }
+
+  .input-box input {
+      font-size: 14px;
+  }
+
+  .title {
+      font-size: 24px;
+  }
+
+  .info-wrapper h2 {
+      font-size: 22px;
+  }
+
+  .info-wrapper p {
+      font-size: 14px;
+  }
+
+  .btn {
+      font-size: 14px;
+      height: 40px;
+  }
+
+  .link {
+      font-size: 13px;
+  }
+}
