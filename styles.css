@@ -276,7 +276,7 @@ body {
   
 /* Hero Section Styling */
 .hero {
-  background-image: url('images/homepage.png');
+  background-image: url('https://raw.githubusercontent.com/titancorpng/titantrading/main/homepage.png');
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
