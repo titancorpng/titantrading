@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In / Sign Up</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login and Register to access Titan Trading Academy services." />
+  <title>Titan Academy | Sign In / Sign Up</title>
 
-    <!-- Font Awesome (for icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
-    <!-- CSS file -->
-    <link rel="stylesheet" href="signin.css" />
-  </head>
-  <body>
-    
-     <!-- Home Section -->
-     <section id="home" class="home">
-      <div class="content">
-      </div>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="signin.css" />
+</head>
+<body>
 
     <!-- Header -->
     <header class="header">
@@ -34,75 +27,72 @@
         </ul>
       </nav>
     </header>
+    
+  <!-- Main Content Wrapper -->
+  <div class="wrapper">
+    <span class="bg1"></span>
 
-    <div class="wrapper">
-      <span class="bg1"></span>
-
-      <!-- Login Form -->
-      <div class="form-wrapper login">
-        <h2 class="title">Login</h2>
-        <form action="#">
-          <div class="input-box">
-            <input type="text" required />
-            <label for="">Username</label>
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="input-box">
-            <input type="password" required />
-            <label for="">Password</label>
-            <i class="fas fa-lock"></i>
-          </div>
-          <button class="btn" type="submit">Login</button>
-          <div class="link">
-            <p>
-              Don't have an account? <a href="#" class="signup-link">Sign Up</a>
-            </p>
-          </div>
-        </form>
-      </div>
-
-      <div class="info-wrapper login">
-        <h2>Welcome Back</h2>
-        <p>Login into your account to access our services</p>
-      </div>
-
-      <span class="bg2"></span>
-
-      <!-- Sign Up Form -->
-      <div class="form-wrapper register">
-        <h2 class="title">Sign Up</h2>
-        <form action="#">
-          <div class="input-box">
-            <input type="email" required />
-            <label for="">Email Address</label>
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="input-box">
-            <input type="text" required />
-            <label for="">Username</label>
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="input-box">
-            <input type="password" required />
-            <label for="">Password</label>
-            <i class="fas fa-lock"></i>
-          </div>
-          <button class="btn" type="submit">Register</button>
-          <div class="link">
-            <p>
-              Already have an account? <a href="#" class="login-link">Login</a>
-            </p>
-          </div>
-        </form>
-      </div>
-
-      <div class="info-wrapper register">
-        <h2>Welcome!</h2>
-        <p>Create your account to access our services</p>
-      </div>
+    <!-- Login Form -->
+    <div class="form-wrapper login">
+      <h2 class="title">Login</h2>
+      <form action="#" method="post">
+        <div class="input-box">
+          <input type="text" id="login-username" required />
+          <label for="login-username">Username</label>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Password</label>
+          <i class="fas fa-lock"></i>
+        </div>
+        <button class="btn" type="submit">Login</button>
+        <div class="link">
+          <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+        </div>
+      </form>
     </div>
 
-    <script src="signin.js"></script>
-    
-  </body>
+    <div class="info-wrapper login">
+      <h2>Welcome Back</h2>
+      <p>Login to your account to access our services</p>
+    </div>
+
+    <span class="bg2"></span>
+
+    <!-- Sign Up Form -->
+    <div class="form-wrapper register">
+      <h2 class="title">Sign Up</h2>
+      <form action="#" method="post">
+        <div class="input-box">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email Address</label>
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="input-box">
+          <input type="text" id="signup-username" required />
+          <label for="signup-username">Username</label>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Password</label>
+          <i class="fas fa-lock"></i>
+        </div>
+        <button class="btn" type="submit">Register</button>
+        <div class="link">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="info-wrapper register">
+      <h2>Welcome!</h2>
+      <p>Create your account to access our services</p>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="signin.js"></script>
+</body>
 </html>
