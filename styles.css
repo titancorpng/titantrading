@@ -28,15 +28,16 @@ html {
 }
 
 body {
-    margin: 0;
-    font-family: var(--font-family);
-    color: var(--white);
-    background-color: var(--black);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--white);
+  background-color: var(--black);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Adjusts to fit the screen height */
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
   
   /* Container for Grid Layout */
   .container {
@@ -281,57 +282,55 @@ body {
   background-attachment: scroll;
   color: var(--white);
   text-align: center;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
   transition: background-position 0.5s ease;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 90%;
   margin: 0 auto;
-  position: relative;
-  top: -1.5rem;
-  right: -10rem;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 2rem;
-  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
   text-align: center;
   animation: slide-up 1s ease-out;
+  color: var(--white);
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  margin-right: -100px;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  white-space: nowrap;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  white-space: normal;
 }
 
 .cta-button {
   display: inline-block;
-  margin-top: 1rem;
-  margin-right: -100px;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: var(--silver);
   color: var(--black);
   border: none;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: var(--white);
+  color: var(--black);
 }
 
 /* Animation for Hero Section */
@@ -346,41 +345,106 @@ body {
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1rem;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
 /* iPhone Video Section */
 .iphone-video-container {
   position: relative;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   height: 600px;
   margin: 2rem auto;
-  background: rgba(0, 0, 0, 0);
-  border-radius: 30px;
+  background: transparent;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.iphone-frame {
-  position: absolute;
-  top: var(--frame-top, 0.5rem);
-  left: var(--frame-left, -4rem);
-  right: var(--frame-right, 4rem);
-  width: var(--frame-width, 140%);
-  height: auto;
-  max-width: 500px;
-  z-index: 2;
-  pointer-events: none;
+.iphone-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  z-index: 1;
 }
 
-.iphone-video {
-  position: absolute;
-  top: var(--video-top, 9%);
-  left: var(--video-left, 8%);
-  width: var(--video-width, 80%);
-  height: var(--video-height, 81%);
-  border-radius: 15px;
-  z-index: 1;
-  object-fit: cover;
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .iphone-video-container {
+    height: 400px;
+  }
+
+  .iphone-video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Responsive Design for Small Phones (e.g. iPhone 14 Pro Max) */
+@media (max-width: 480px) {
+  .iphone-video-container {
+    height: 580px;
+    width: 270px;
+    margin-top: 1.5rem;
+  }
+
+  .iphone-video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-content {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Services Section - Optimized */
