@@ -128,17 +128,18 @@ body {
   
 /* Header Styling */
 .header {
-    background-color: var(--black);
-    padding: 1rem 1rem;
-    position: sticky;
-    top: 0;
-    height: 8rem;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    transition: background-color 0.3s ease;
-  }
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem 1rem;
+  position: sticky;
+  top: 0; /* Ensure it stays at the top of the page */
+  z-index: 1000; /* Ensure it's above other content */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
   
   /* Logo Styling */
   .logo {
@@ -262,16 +263,6 @@ body {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg); /* Adjusted for bigger size */
   }
-}
-
-/* Header Styling */
-.header {
-  background-color: var(--black);
-  color: var(--white);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  width: 100%;
 }
   
 /* Hero Section Styling */
