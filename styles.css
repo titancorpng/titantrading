@@ -276,9 +276,10 @@ body {
   
 /* Hero Section Styling */
 .hero {
-  background-image: url('https://raw.githubusercontent.com/titancorpng/titantrading/main/homepage.png');
+  background-image: url('/titantrading/homepage.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-attachment: scroll;
   color: var(--white);
   text-align: center;
