@@ -35,8 +35,15 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Adjusts to fit the screen height */
+  height: 100vh; /* Ensures the body takes up the full viewport height */
   overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+/* Flex container that houses the main content */
+.main-content {
+  flex-grow: 1; /* Allows the content to grow and fill space, enabling scroll */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding-top: 8rem; /* Adds space for the sticky header */
 }
   
   /* Container for Grid Layout */
@@ -129,16 +136,16 @@ body {
 /* Header Styling */
 .header {
   background-color: var(--black);
-  color: var(--white);
   padding: 1rem 1rem;
   position: sticky;
-  top: 0; /* Ensure it stays at the top of the page */
-  z-index: 1000; /* Ensure it's above other content */
-  width: 100%;
+  top: 0; /* Ensures it sticks to the top */
+  height: 8rem;
+  z-index: 1000; /* Keeps it on top of other content */
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   transition: background-color 0.3s ease;
+  width: 100%; /* Ensure header spans the entire width */
 }
   
   /* Logo Styling */
@@ -168,8 +175,11 @@ body {
 
 /* Main Navigation */
 .nav {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: 1rem; /* optional: small padding from screen edge */
 }
 
 .nav ul {
