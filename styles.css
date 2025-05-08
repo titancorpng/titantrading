@@ -432,7 +432,7 @@ body {
 /* Responsive Design for Small Phones (e.g. iPhone 14 Pro Max) */
 @media (max-width: 480px) {
   .iphone-video-container {
-    height: 580px;
+    height: 100%;
     width: 270px;
     margin-top: 1.5rem;
   }
